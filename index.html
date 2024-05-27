@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Rutina De entrenamiento</title>
 </head>
 <body>
+    <div id="app">
+        <h1>Rutina de Entrenamiento</h1>
+        <select id="seriesCalentamiento">
+            <option value="" disabled selected hidden>Seleccione series de Calentamiento</option>
+            <option value="Sentadillas con salto">Sentadillas con salto</option>
+            <option value="Plancha con rotación">Plancha con rotación</option>
+            <option value="Escaladores">Escaladores</option>
+        </select>
+        <select id="seriesFuerza">
+            <option value="" disabled selected hidden>Seleccione series de fuerza</option>
+            <option value="Press militar">Press militar</option>
+            <option value="Remo con barra">Remo con barra</option>
+            <option value="Flexiones">Flexiones</option>
+        </select>
+        <select id="seriesFlexibilidad">
+            <option value="" disabled selected hidden>Seleccione series de flexibilidad</option>
+            <option value="Estiramiento de cuádriceps">Estiramiento de cuádriceps</option>
+            <option value="Estiramiento de gemelos">Estiramiento de gemelos</option>
+            <option value="Estiramiento de la espalda baja">Estiramiento de la espalda baja</option>
+        </select>
+        <button id="rutinaButton" class="boton">Ver Rutina</button>
+        <button id="crearButton" class="boton">Crear nueva Rutina</button>
+        <ul id="rutinaLista"></ul>
+    </div>
     <script type="module" src="./main.js"></script>
 </body>
 </html>
