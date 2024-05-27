@@ -6,7 +6,6 @@ const rutina = () => {
         fuerza: document.getElementById("seriesFuerza").value,
         flexibilidad: document.getElementById("seriesFlexibilidad").value,
     };
-
     if (ejercicios.calentamiento && ejercicios.fuerza && ejercicios.flexibilidad) {
         rutinaRealizada.push(ejercicios);
         localStorage.setItem('rutinaRealizada', JSON.stringify(rutinaRealizada));
@@ -16,18 +15,18 @@ const rutina = () => {
 };
 
 const verRutina = () => {
-  const rutinaLista = document.getElementById('rutinaLista');
-  rutinaLista.innerHTML = '';
-  rutinaRealizada.forEach((ejercicios, e) => {
-      const li = document.createElement('li');
-      li.innerText = `Rutina ${e + 1}: Calentamiento: ${ejercicios.calentamiento}, Fuerza: ${ejercicios.fuerza}, Flexibilidad: ${ejercicios.flexibilidad}.`;
-      const removerButton = document.createElement('button'); 
-      removerButton.innerText = 'Remover';
-      removerButton.className = 'botonCancelar';
-      removerButton.onclick = () => removerRutina(e);
-      li.append(removerButton); 
-      rutinaLista.append(li);
-  });
+    const rutinaLista = document.getElementById('rutinaLista');
+    rutinaLista.innerHTML = '';
+    rutinaRealizada.forEach((ejercicios, e) => {
+        const li = document.createElement('li');
+        li.innerText = `Rutina ${e + 1}: Calentamiento: ${ejercicios.calentamiento}, Fuerza: ${ejercicios.fuerza}, Flexibilidad: ${ejercicios.flexibilidad}.`;
+        const removerButton = document.createElement('button'); 
+        removerButton.innerText = 'Remover';
+        removerButton.className = 'botonCancelar';
+        removerButton.onclick = () => removerRutina(e);
+        li.append(removerButton); 
+        rutinaLista.append(li);
+    });
 };
 
 const removerRutina = (e) => {
